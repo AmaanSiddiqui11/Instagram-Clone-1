@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/playerView"
+        app:show_buffering="never"
+        app:resize_mode="fill"
+        app:use_controller="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_info_layout"
+        android:orientation="horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/reel_title" >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/reel_profile_image"
+            android:src="@drawable/ertugrul_ghazi"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reel_profile_name"
+            android:text="Profile Name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reel_title"
+        android:text="Reel Title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toTopOf="@id/reel_desc"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reel_desc"
+        android:text="Reel Description"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginBottom="100dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
