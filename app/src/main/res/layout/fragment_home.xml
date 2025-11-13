@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    
     tools:context=".fragment.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +20,7 @@
             android:id="@+id/insta_title"
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="5dp"
             android:src="@drawable/insta_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
